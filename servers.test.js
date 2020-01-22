@@ -14,14 +14,15 @@ describe("Servers test (with setup and tear-down)", function() {
 
   it('should match the contents of allServers with serverTable on updateServerTable()', function(){
     submitServerInfo();
-    expect(document.querySelector("#serverTable tbody tr").id).toEqual('server1');
-    expect(document.querySelectorAll("#serverTable tbody tr td")[0].innerText).toEqual('Alice');
-    expect(document.querySelectorAll("#serverTable tbody tr td")[1].innerText).toEqual('$0.00');    
+      expect(document.querySelector("#serverTable tbody tr").id).toEqual('server1');
+      expect(document.querySelectorAll("#serverTable tbody tr td")[0].innerText).toEqual('Alice');
+      expect(document.querySelectorAll("#serverTable tbody tr td")[1].innerText).toEqual('$0.00');    
   });
 
   afterEach(function() {
     // teardown logic
     allServers = {};
     serverTbody.innerHTML = '';
+    serverId=0;
   });
 });
